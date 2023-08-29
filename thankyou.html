@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thank You</title>
+    <link rel="shortcut icon" href="Resources/icon.png">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    img{
+        /* top: 2%; */
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        left:650px;
+
+    }
+    body{
+        background-color: #c40052;
+        color: white;
+        font-family:'Poppins', sans-serif;;
+    }
+    h1{
+        font-size:50px;
+        text-align: center;
+        top: 20px;
+    }
+    h2{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        font-size: 30px;
+    }
+    .text{
+        position: absolute;
+        top: 150px;
+        left:420px;
+    }
+</style>
+<body>
+    <div>
+        <img src="Resources/icon.png" alt="">
+    </div>
+    <div class="text">
+        <h1>Thank You For Ordering!</h1>
+        <p>Your order number :<p id="orderno" style="font-weight:bold;"></p></p>
+        <h2>Your order will be delivered shortly!</h2>
+        <h3>Pay cash on delivery and kindly tip our delivery partner. </h3>
+        <h3>Keep craving for more !!</h3>
+    </div>
+    <script>
+        document.getElementById("orderno").innerHTML =
+        Math.floor(Math.random() * (999999 - 100000)) + 100000;
+    </script>
+</body>
+</html>

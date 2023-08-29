@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body{   
+            background-image: url("Resources/map_iframe_bg_2.jpg");
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position:left;
+        }
+        .container{
+            /*background-color: black;*/
+            width: fit-content;
+            padding: 20px;
+            border-radius: 25px;
+        }
+        .container-item{
+            display: block;
+            background-color: rgba(0,0,0,0.7);
+            width: 430px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+        }
+        .container-item:hover{
+            transform: scale(1.05);
+            transition: all ease-in 200ms;
+        }
+        .rating{
+            color:white;
+            background-color:green;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;   
+        }
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 25px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        td{
+            font-weight: bold;
+            padding: 3%;
+            padding-right: 30px;
+        }
+        .one-line{
+            display: inline-flex;
+        }
+        .border{
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        pre {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        span{
+            color: rgb(114, 113, 113);
+            font-weight: lighter;
+        }
+        /*scroll bar styling*/
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track { 
+        background-color: rgba(0,0,0,1);
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3); 
+        border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255,255,255,0.5); 
+        }
+        *{
+        font-family:'Poppins', sans-serif;
+        color: white;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <h2 align="center">TOWN HALL</h2>
+            <a href="orderpage_truecakes.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/true cakes carousel.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        TRUE CAKES<br>
+                        <div class="one-line"><pre><span class="rating"> ✪ 4.3 </span> • 15mins</pre></div><br/>
+                        <span> Bakery, Desserts</span>
+                    </td>
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_foodism.in.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/foodism carousel.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        FOODISM.IN<br/>
+                        <div class="one-line"><pre><span class="rating" style="background: #07d807;"> ✪ 3.6 </span> • 22mins</pre></div><br/>
+                        <span>
+                            North Indian, Fast Food, Chinese
+                        </span>
+                    </td>    
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_nightout.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/Nightout.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        NIGHTOUT<br/>
+                        <div class="one-line"><pre><span class="rating"  style="background: #07d807;"> ✪ 3.4 </span> • 33mins</pre></div><br/>
+                        <span>
+                            Chinese, South Indian, North Indian
+                        </span>
+                    </td>
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_mcdonalds.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/mcdonalds carousel.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        MC DONALD'S<br/>
+                        <div class="one-line"><pre><span class="rating"> ✪ 4.1 </span> • 23mins</pre></div><br/>
+                        <span>
+                            Burger, Fastfood, Desserts
+                        </span>
+                    </td>
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_chennaisbiriyanihouse.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/Chennais biriyani house carousel.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        CHENNAI'S BIRIYANI HOUSE<br/>
+                        <div class="one-line"><pre><span class="rating" style="background: #07d807;"> ✪ 3.9 </span> • 20mins</pre></div><br/>
+                        <span>
+                            South Indian, Biryani, North Indian
+                        </span>
+                    </td>
+                </table>
+            </div>
+            </a>
+        </div>
+    </body>
+</html>

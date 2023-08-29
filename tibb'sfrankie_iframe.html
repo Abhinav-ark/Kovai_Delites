@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body{   
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position:left;
+        }
+        .container{
+            /*background-color: black;*/
+            width: fit-content;
+            padding: 20px;
+            border-radius: 25px;
+        }
+        .container-item{
+            display: block;
+            background-color: rgba(0,0,0,0.7);
+            width: 600px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+        }
+        .container-item:hover{
+            transform: scale(1.05);
+            transition: all ease-in 200ms;
+        }
+        .rating{
+            color:white;
+            background-color:green;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;   
+        }
+        img {
+            height: 120px;
+            width: 120px;
+            border-radius: 25px;
+        }
+        td{
+            font-weight: bold;
+            padding: 3%;
+            padding-right: 30px;
+        }
+        .one-line{
+            display: inline-flex;
+        }
+        .border{
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        pre {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        span{
+            color: rgb(114, 113, 113);
+            font-weight: lighter;
+        }
+        /*scroll bar styling*/
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track { 
+        background-color: rgba(0,0,0,1);
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3); 
+        border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255,255,255,0.5); 
+        }
+        *{
+        font-family:'Poppins', sans-serif;
+        color: white;
+        }
+        .submit{
+            position: relative;
+            left: 390px;
+            width: fit-content;
+        }
+        .submit:hover{
+            transform: scale(1.1);
+            background-color: rgba(40, 137, 228, 0.733);
+        }
+        #demo{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo1{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        } 
+        #demo2{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo3{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo4{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .desc{
+            font-size: x-small;
+            color:rgb(114, 113, 113); 
+        }
+        .slidecontainer{
+            position: relative;
+            top:15px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/schezwan veg frankie.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        Schezwan Veg Frankie<br>
+                        ₹100<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                        <p class="desc">A delicious serving of our veg patty along with our Schezwan sauce to give that additional tangy punch, served in a roti topped with onions and our special frankie masala.</p>
+                    </td>
+                    <td>
+                        <form action="">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -10px;">
+                            <br>
+                            
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange">
+                                <p>QUANTITY: <span id="demo"></span></p>
+                            </div>
+
+                        </form>
+                    </td>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/chicken tikka frankie.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        Chicken Tikka Frankie<br/>
+                        ₹110<br>
+                        <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;">    
+                        <p class="desc">Our speciality, cubes of chicken tikka cooked in rich gravy to give it an authentic  flavour and served with our usual accomplishment of garnishing and special frankie masala wrapped in an egg roll.</p>
+                    </td>
+                    <td>
+                        <form action="" >
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -10px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange1">
+                                <p>QUANTITY: <span id="demo1"></span></p>
+                            </div>
+
+                            <br>
+                        </form>
+                    </td>  
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/tawa paneer frankie.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        Tawa Paneer Frankie<br/> 
+                        ₹100<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                        <p class="desc">Cubes of soft panner marinated in tikka sauce generously smothered in a gravy served in a roti, garnished with onion, pickled chilli and our special frankie masala.</p>
+                    </td>
+                    <td>
+                        <form action="" class="ffloat" >
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange2">
+                                <p>QUANTITY: <span id="demo2"></span></p>
+                            </div>
+
+                            <br>
+                        </form>
+                    </td>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/veg frankie.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        Veg Frankie<br/>
+                        ₹90<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">                     
+                        <p class="desc">A delicately flavoured mashed potato roll wrapped in a roti, garnished with mint sauce, onion, pickled chilli and our special masala.</p>
+                    </td>
+                    <td>
+                        <form action="" class="ffloat" >
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange3">
+                                <p>QUANTITY: <span id="demo3"></span></p>
+                            </div>
+
+                            <br>
+                        </form>
+                    </td>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/butter chicekn frankie.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        Butter Chicken Frankie<br/>
+                        ₹110<br>
+                        <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                        <p class="desc">Chicken roasted in the tandoor, shredded, and added to our butter masala gravy to give you that original tandoori taste wrapped in an egg roll.</p>
+                    </td>
+                    <td>
+                        <form action="" class="ffloat" >
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange4">
+                                <p>QUANTITY: <span id="demo4"></span></p>
+                            </div>
+
+                            <br>
+
+                        </form>
+                    </td>
+                </table>
+            </div>
+            <form class="submit" action="thankyou.html" target="_parent" >
+                <a><input type="submit" name="" id="" style="background-color: rgba(0, 0, 0, 0.342); border-radius: 5px;position: absolute; right: 60px;"></a>
+            </form>
+        </div>
+        <script>
+            var slider = document.getElementById("myRange");
+            var slider1 = document.getElementById("myRange1");
+            var slider2 = document.getElementById("myRange2");
+            var slider3 = document.getElementById("myRange3");
+            var slider4 = document.getElementById("myRange4");
+            var output = document.getElementById("demo");
+            var output1 = document.getElementById("demo1");
+            var output2 = document.getElementById("demo2");
+            var output3 = document.getElementById("demo3");
+            var output4 = document.getElementById("demo4");
+            output.innerHTML = slider.value;
+            output1.innerHTML = slider.value;
+            output2.innerHTML = slider.value;
+            output3.innerHTML = slider.value;
+            output4.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+            slider1.oninput = function() {
+                output1.innerHTML = this.value;
+            }
+            slider2.oninput = function() {
+                output2.innerHTML = this.value;
+            }
+            slider3.oninput = function() {
+                output3.innerHTML = this.value;
+            }
+            slider4.oninput = function() {
+                output4.innerHTML = this.value;
+            }
+        </script>
+    </body>
+</html>

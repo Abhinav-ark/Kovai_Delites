@@ -1,0 +1,102 @@
+<html>
+    <head>
+       <title>
+            OTP VERIFICATION | KOVAI DELITES
+       </title>
+       <link rel="shortcut icon" href="Resources/icon.png">
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body {
+        
+        background-image: url("Resources/validate_bg.jpg");
+        background-size:cover;
+        height: 100vh;
+        background-position: center;
+
+        }
+        
+        body ul img {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        transition: 0.2s ease-in;
+        }
+        body ul h1 {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        transition: 0.2s ease-in;
+        }
+        /*scroll bar styling*/
+        ::-webkit-scrollbar {
+        width: 12px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track { 
+        background-color: rgba(0,0,0,1);
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3); 
+        border-radius: 6px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255,255,255,0.5); 
+        }
+        *{
+        font-family:'Poppins', sans-serif;
+        }
+        a{
+            color: rgb(0, 153, 255);
+        }
+        .container{
+            background-color: rgba(0,0,0,0.6);
+            width: fit-content;
+            padding: 5%;
+            border-radius: 50px;
+            position: absolute;
+            top:150px;
+            left:150px;
+        }
+    </style>
+       <body style="background-color:black;" >
+        <script>
+           function validateform(){
+                let x = document.forms["form"]
+                ["text"].value;
+                if(x == 0) {
+                   document.getElementById("p").innerHTML = "OTP Shouldn't be Empty"; 
+                   return false;             
+                }
+                if((x<1000)||(x>9999))
+                {
+                    document.getElementById("p").innerHTML = "Please Enter 4 digits!"; 
+                   return false;
+                }
+            }
+        </script>
+        <ul>
+        <center><a href="homepage.html"  ><img src="Resources\icon.png" width="60px" height="60px" style="position: relative;top:20px;left: 30px;" >
+           <h1 style="color:white;position: relative;top: -6px;left: 30px;" > Kovai Delites</h1></a>
+        </ul><br> <br></center>
+        <div class="container">
+                   <center> <h1 style="color:white;">Please enter the 4 digit one time password 
+                     sent to +91 XXXXXXXXXX <br> </h1></center>
+                    <center>
+                        <form name="form" onsubmit="return validateform()" method="post" >
+                        <input  type="number" name="text" maxlength="4" style="width:150px;height: 40px;text-align: center;" /> <br></br>
+                        <p style="color: white" id="p" ></p>
+                        <input type="submit" value="Validate" style="height: 30px;width: 100px; text-align:center;background-color:dodgerblue;color: aliceblue;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;border-radius: 6px; cursor: pointer;" ></br></br>
+                        </form>
+                    <center><h3 style="color:white;">Didn't get the code? <a href="validate_otp.html">Resend</a></h3> </center>
+                    </center>
+        </div>
+                </body>
+           </html>
+               
+          

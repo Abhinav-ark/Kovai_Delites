@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body{   
+            background-image: url("Resources/map_iframe_bg_2.jpg");
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position:left;
+        }
+        .container{
+            /*background-color: black;*/
+            width: fit-content;
+            padding: 20px;
+            border-radius: 25px;
+        }
+        .container-item{
+            display: block;
+            background-color: rgba(0,0,0,0.7);
+            width: 430px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+        }
+        .container-item:hover{
+            transform: scale(1.05);
+            transition: all ease-in 200ms;
+        }
+        .rating{
+            color:white;
+            background-color:green;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;   
+        }
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 25px;
+        }
+        td{
+            font-weight: bold;
+            padding: 3%;
+            padding-right: 30px;
+        }
+        .one-line{
+            display: inline-flex;
+        }
+        .border{
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        pre {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        span{
+            color: rgb(114, 113, 113);
+            font-weight: lighter;
+        }
+        a{
+            text-decoration: none;
+        }
+        /*scroll bar styling*/
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track { 
+        background-color: rgba(0,0,0,1);
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3); 
+        border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255,255,255,0.5); 
+        }
+        *{
+        font-family:'Poppins', sans-serif;
+        color: white;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <h2 align="center">SINGANALLUR</h2>
+            <a href="orderpage_articini.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="./Resources/artinci carousel.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        ARTICINI<br>
+                        <div class="one-line"><pre><span class="rating" style="background: #07d807;"> ✪ 3.6 </span> • 23min</pre></div><br/>
+                        <span>Ice Cream, Desserts, Beverages</span>
+                    </td>
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_ibaco.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="./Resources/ibaco.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        IBACO<br/>
+                        <div class="one-line"><pre><span class="rating"> ✪ 4.5 </span> • 26min</pre></div><br/>
+                        <span>Desserts, Ice Cream</span>
+                    </td>    
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_littlearabia.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="./Resources/little arabia.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        LITTLE ARABIA<br/>
+                        <div class="one-line"><pre><span class="rating"> ✪ 4.3 </span> • 24min</pre></div><br/>
+                        <span>Arabian, BBQ, Lebanese</span>
+                    </td>
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_momolicious.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="./Resources/Momolicious.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        MOMOLICIOUS<br/>
+                        <div class="one-line"><pre><span class="rating"> ✪ 4.1 </span> • 28min</pre></div><br/>
+                        <span>Chinese, Momos, Fast Food</span>
+                    </td>
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_shreesaivirundhu.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="./Resources/shree sai virundhu.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        Shree Sai Virundhu<br/>
+                        <div class="one-line"><pre><span class="rating"> ✪ 4.1 </span> • 30min</pre></div><br/>
+                        <span>South Indian</span>
+                    </td>
+                </table>
+            </div>
+            </a>
+        </div>
+    </body>
+</html>
