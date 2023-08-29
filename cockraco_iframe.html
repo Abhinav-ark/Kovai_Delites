@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body{   
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position:left;
+        }
+        .container{
+            /*background-color: black;*/
+            width: fit-content;
+            padding: 20px;
+            border-radius: 25px;
+        }
+        .container-item{
+            display: block;
+            background-color: rgba(0,0,0,0.7);
+            width: 600px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+        }
+        .container-item:hover{
+            transform: scale(1.05);
+            transition: all ease-in 200ms;
+        }
+        .rating{
+            color:white;
+            background-color:green;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;   
+        }
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 25px;
+        }
+        td{
+            font-weight: bold;
+            padding: 3%;
+            padding-right: 30px;
+        }
+        .one-line{
+            display: inline-flex;
+        }
+        .border{
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        pre {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        /*scroll bar styling*/
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track { 
+        background-color: rgba(0,0,0,1);
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3); 
+        border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255,255,255,0.5); 
+        }
+        *{
+        font-family:'Poppins', sans-serif;
+        color: white;
+        }
+        .submit{
+            position: relative;
+            left: 390px;
+            width: fit-content;
+        }
+        .submit:hover{
+            transform: scale(1.1);
+        }
+        #demo{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo1{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        } 
+        #demo2{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo3{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo4{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .desc{
+            font-size: x-small;
+            color:rgb(114, 113, 113); 
+        }
+        .slidecontainer{
+            position: relative;
+            top:15px;
+        }
+    </style>
+        <div class="container">
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/chicken cock ra co soup.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        Chicken Cockraco Soup<br>
+                        ₹60<br>
+                        <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;"><br>
+                        <span></span>
+                        
+                    </td>
+                    <td>
+                        <form action="">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <br>
+                            
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange4">
+                                <p>QUANTITY: <span id="demo4"></span></p>
+                            </div>
+
+                        </form>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/chilli chicken boneless.jpg"></td>
+                    <td style="padding-right: 30px;width: 250px;">
+                        Chilli Chicken Boneless<br/>
+                        ₹300<br>
+                        <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;"><br>
+                        <span></span>    
+                    </td>
+                    <td>
+                        <form action="" >
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange3">
+                                <p>QUANTITY: <span id="demo3"></span></p>
+                            </div>
+
+                            <br>
+                        </form>
+                    </td>
+                </tr>  
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/chicken lollipop.jpg"></td>
+                    <td style="padding-right: 30px;width: 250px;">
+                        Chicken Lolly Pop 6 Pcs<br/> 
+                        ₹230<br>
+                        <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;"><br>
+                        <span></span>
+                    </td>
+                    <td>
+                        <form action="">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange2">
+                                <p>QUANTITY: <span id="demo2"></span></p>
+                            </div>
+
+                            <br>
+                        </form>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/egg kothu parotta.jpg"></td>
+                    <td style="padding-right: 30px;width: 250px;">
+                        Egg Kothu Parotta<br/>
+                        ₹154<br>
+                        <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;"><br>
+                        <span></span>                     
+                    </td>
+                    <td>
+                        <form action="">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange1">
+                                <p>QUANTITY: <span id="demo1"></span></p>
+                            </div>
+                            <br>
+                        </form>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/non veg meals.jpg"></td>
+                    <td style="padding-right: 30px;width: 250px;">
+                        Non Veg Meals<br/>
+                        ₹189<br>
+                        <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;"><br>
+                        <p class="desc">Chutney, sambar, rasam, more kulambu or puli kulambu, kuttdu, poriyal, chicken kolambu</p>
+                    
+                    </td>
+                    <td>
+                        <form action="">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange">
+                                <p>QUANTITY: <span id="demo"></span></p>
+                            </div>
+
+                            <br>
+
+                        </form>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <form class="submit" action="thankyou.html" target="_parent" >
+                <a><input type="submit" name="" id="" style="background-color: rgba(0, 0, 0, 0.342); border-radius: 5px;position:absolute;right:60px"></a>
+            </form>
+        </div>
+        <script>
+            var slider = document.getElementById("myRange");
+            var slider1 = document.getElementById("myRange1");
+            var slider2 = document.getElementById("myRange2");
+            var slider3 = document.getElementById("myRange3");
+            var slider4 = document.getElementById("myRange4");
+            var output = document.getElementById("demo");
+            var output1 = document.getElementById("demo1");
+            var output2 = document.getElementById("demo2");
+            var output3 = document.getElementById("demo3");
+            var output4 = document.getElementById("demo4");
+            output.innerHTML = slider.value;
+            output1.innerHTML = slider.value;
+            output2.innerHTML = slider.value;
+            output3.innerHTML = slider.value;
+            output4.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+            slider1.oninput = function() {
+                output1.innerHTML = this.value;
+            }
+            slider2.oninput = function() {
+                output2.innerHTML = this.value;
+            }
+            slider3.oninput = function() {
+                output3.innerHTML = this.value;
+            }
+            slider4.oninput = function() {
+                output4.innerHTML = this.value;
+            }
+        </script>
+    </body>
+</html>

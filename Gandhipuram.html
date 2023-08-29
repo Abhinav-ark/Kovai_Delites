@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body{   
+            background-image: url("Resources/map_iframe_bg_2.jpg");
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position:left;
+        }
+        .container{
+            /*background-color: black;*/
+            width: fit-content;
+            padding: 20px;
+            border-radius: 25px;
+        }
+        .container-item{
+            display: block;
+            background-color: rgba(0,0,0,0.7);
+            width: 430px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+        }
+        .container-item:hover{
+            transform: scale(1.05);
+            transition: all ease-in 200ms;
+        }
+        .rating{
+            color:white;
+            background-color:green;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;   
+        }
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 25px;
+        }
+        td{
+            font-weight: bold;
+            padding: 3%;
+            padding-right: 30px;
+        }
+        .one-line{
+            display: inline-flex;
+        }
+        .border{
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        pre {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        span{
+            color: rgb(114, 113, 113);
+            font-weight: lighter;
+        }
+        a{
+            text-decoration: none;
+        }
+        /*scroll bar styling*/
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track { 
+        background-color: rgba(0,0,0,1);
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3); 
+        border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255,255,255,0.5); 
+        }
+        *{
+        font-family:'Poppins', sans-serif;
+        color: white;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <h2 align="center">GANDHIPURAM</h2>
+            <a href="orderpage_chaidays.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="./Resources/chai days carousel.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        CHAI DAYS<br>
+                        <div class="one-line"><pre><span class="rating" style="background: #07d807;"> ✪ 3.5 </span> • 18min</pre></div><br/>
+                        <span>Fast Food, Beverages</span>
+                    </td>
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_thebabychef.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="./Resources/The baby chef.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        THE BABY CHEF<br/>
+                        <div class="one-line"><pre><span class="rating"> ✪ 4.2 </span> • 22mins</pre></div><br/>
+                        <span>Ice Cream, Beverages</span>
+                    </td>    
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_dindigulthalappakatti.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="./Resources/dindigul thalappakatti.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        DINDIGUL THALAPPAKATTI<br/>
+                        <div class="one-line"><pre><span class="rating"> ✪ 4.0 </span> • 31min</pre></div><br/>
+                        <span>Biryani, South Indian</span>
+                    </td>
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_adyaranandhabhavan.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="./Resources/adyar anandha bhavan.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        ADYAR ANANDA BHAVAN<br/>
+                        <div class="one-line"><pre><span class="rating" > ✪ 4.1 </span> • 26min</pre></div><br/>
+                        <span>South Indian, North Indian</span>
+                    </td>
+                </table>
+            </div>
+            </a>
+            <a href="orderpage_pizzahut.html" target="_parent">
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="./Resources/Pizza hut.jpg"></td>
+                    <td style="padding-right: 30px;">
+                        PIZZA HUT<br/>
+                        <div class="one-line"><pre><span class="rating"  style="background: #07d807;"> ✪ 3.8 </span> • 46min</pre></div><br/>
+                        <span>Pizza, Fast Food, Dessert</span>
+                    </td>
+                </table>
+            </div>
+            </a>
+        </div>
+    </body>
+</html>

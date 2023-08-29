@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>KOVAI DELITES | Sign-in</title>
+  <link rel="shortcut icon" href="icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    crossorigin="anonymous">
+</head>
+<script>
+  function check1(){
+    let classes = (classes) => document.getElementsByClassName(classes);
+    let id = (id) => document.getElementById(id);
+    let inp = classes("inp"),
+        inpp = classes("inpp"),
+        form1 = id("login"),
+        errorMsg1 = classes("error1"),
+        successIcon1 = classes("success-icon1"),
+        failureIcon1 = classes("failure-icon1");
+        form1.addEventListener("submit", (e) => {
+        e.preventDefault();
+        puthusu(inp, 0, "Username cannot be blank");
+        puthusu(inpp, 1, "Password cannot be blank");
+    });
+    let puthusu = (id, serial, message) => {
+      if (id.value.trim() === "") {
+        errorMsg1[serial].innerHTML = message;
+        id.style.border = "2px solid red";
+        failureIcon1[serial].style.opacity = "1";
+        successIcon1[serial].style.opacity = "0";
+
+      } else {
+        errorMsg1[serial].innerHTML = "";
+        id.style.border = "2px solid green";
+        failureIcon1[serial].style.opacity = "0";
+        successIcon1[serial].style.opacity = "1";
+      }
+  }
+}
+
+  function check() {
+    let id = (id) => document.getElementById(id);
+    let classes = (classes) => document.getElementsByClassName(classes);
+    let names = (names) => document.getElementsByName(names);
+    let email = id("email"),
+      password = id("psw"),
+      repsw = id("psw-repeat"),
+      remember = id("remember"),
+      area = id("area"),
+      gen1 = id("gender1"),
+      gen2 = id("gender2"),
+      gen3 = id("gender3"),
+      age = id("age");
+      add = id("address"),
+      ph = id("ph"),
+      form = id("signup"),
+      errorMsg = classes("error"),
+      successIcon = classes("success-icon"),
+      failureIcon = classes("failure-icon");
+
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      engine(email, 0, "Email cannot be blank");
+      engine(password, 1, "Password cannot be blank");
+      engine(repsw, 2, "Re-Password cannot be blank");
+      engine(add, 7, "Please Enter Your Address");
+      engine(age, 6, "Please Select your DOB");
+    });
+    let engine = (id, serial, message) => {
+      if (id.value.trim() === "") {
+        errorMsg[serial].innerHTML = message;
+        id.style.border = "2px solid red";
+        failureIcon[serial].style.opacity = "1";
+        successIcon[serial].style.opacity = "0";
+
+      } else {
+        errorMsg[serial].innerHTML = "";
+        id.style.border = "2px solid green";
+        failureIcon[serial].style.opacity = "0";
+        successIcon[serial].style.opacity = "1";
+      }
+      // if (id.checked) {
+      //   errorMsg[serial].innerHTML = "";
+      //   id.style.border = "2px solid green";
+      //   failureIcon[serial].style.opacity = "0";
+      //   successIcon[serial].style.opacity = "1";
+      // } else {
+      //   errorMsg[serial].innerHTML = message;
+      //   id.style.border = "2px solid red";
+      //   failureIcon[serial].style.opacity = "1";
+      //   successIcon[serial].style.opacity = "0";
+
+      // }
+    };
+    if (password.value != repsw.value) {
+      errorMsg[2].innerHTML = "Passwords do not match";
+      repsw.style.border = "2px solid red";
+      failureIcon[2].style.opacity = "1";
+      successIcon[2].style.opacity = "0";
+
+    }
+    if (isNaN(ph.value) || ph.value < 1000000000 || ph.value > 9999999999) {
+      errorMsg[8].innerHTML = "Please enter the phone number (Only 10-Digit)";
+      ph.style.border = "2px solid red";
+      failureIcon[8].style.opacity = "1";
+      successIcon[8].style.opacity = "0";
+
+    } else {
+      errorMsg[8].innerHTML = "";
+      ph.style.border = "2px solid green";
+
+      // icons
+      failureIcon[8].style.opacity = "0";
+      successIcon[8].style.opacity = "1";
+    }
+
+    if (gen1.checked == true || gen2.checked == true || gen3.checked == true) {
+      errorMsg[5].innerHTML = "";
+      gen1.style.border = "2px solid green";
+
+      // icons
+      failureIcon[5].style.opacity = "0";
+      successIcon[5].style.opacity = "1";
+    } else if (gen1.checked == false && gen2.checked == false && gen3.checked == false) {
+      errorMsg[5].innerHTML = "Please Select the gender";
+      gen1.style.border = "2px solid red";
+
+      // icons
+      failureIcon[5].style.opacity = "1";
+      successIcon[5].style.opacity = "0";
+
+    }
+    if (document.getElementById("area").options[document.getElementById("area").selectedIndex].text == "Select Area") {
+      errorMsg[4].innerHTML = "Please Select the Area";
+      area.style.border = "2px solid red";
+
+
+      // icons
+      failureIcon[4].style.opacity = "1";
+      successIcon[4].style.opacity = "0";
+
+    } else {
+      errorMsg[4].innerHTML = "";
+      area.style.border = "2px solid green";
+
+      // icons
+      failureIcon[4].style.opacity = "0";
+      successIcon[4].style.opacity = "1";
+    }
+    
+
+  }
+
+
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+  body {
+    background-color: #c40052;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  img {
+    margin-left: 15%;
+    border-radius: 25%;
+  }
+
+  .form-control {
+    /* margin-bottom: 10px; */
+    /* padding-bottom: 20px; */
+    position: relative;
+  }
+
+  .form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  .form-control.success input {
+    border-color: #2ecc71;
+  }
+
+  .form-control.error input {
+    border-color: #e74c3c;
+  }
+
+  .form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+  }
+
+  .form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+  }
+
+  .form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+  }
+
+  .form-control small {
+    color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+  }
+
+  .form-control.error small {
+    visibility: visible;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .card {
+    border-radius: 3%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  #inp {
+    background: transparent;
+    border-bottom: 1px solid #c40052;
+  }
+
+  #Forgot_password {
+    color: #615e5e;
+    position: relative;
+    left: 100px;
+    top: 10px;
+  }
+
+
+  input[type=submit] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: #c40052;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 50px;
+  }
+
+  .inner {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 18px;
+    width: fit-content;
+    outline: none;
+    display: block;
+    border: white;
+  }
+
+  .card {
+    outline: none;
+    display: block;
+  }
+
+
+  .outer {
+    padding: 3%;
+  }
+
+  .form {
+    /* width: 30.5625em; */
+    height: 520px;
+    padding: 25px;
+    margin-left: 30px;
+  }
+
+  .contain {
+    margin-top: 120px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input[type=email],
+  input[type=text],
+  input[type=password],
+  select {
+    width: 85%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  form div i {
+    position: absolute;
+    margin-right: 430px;
+    margin-top: 5px;
+  }
+  form span i {
+    position: absolute;
+    margin-right: 430px;
+    margin-top: 20px;
+  }
+
+  .success-icon,
+  .failure-icon {
+    right: 0;
+    opacity: 0;
+  }
+  .success-icon1,
+.failure-icon1 {
+  right: 0;
+  opacity: 0;
+}
+
+  .failure-icon,
+  .error {
+    color: red;
+  }
+
+  .success-icon {
+    color: green;
+  }
+  .failure-icon1,
+  .error1 {
+    color: red;
+  }
+
+  .success-icon1 {
+    color: green;
+  }
+
+  .error1{
+    font-size: 14.5px;
+    margin-top: 5px;
+  }
+  .error {
+    font-size: 14.5px;
+    margin-top: 5px;
+  }
+
+  select {
+    width: 150px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=checkbox] {
+    width: 15px;
+    display: inline-flex;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=range] {
+    width: 150px;
+    display: inline-flex;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=number] {
+    width: 150px;
+    display: inline-flex;
+    border: none;
+    background: #f1f1f1;
+    height: 30px;
+  }
+
+  input[type=radio] {
+    width: 4%;
+    display: inline-flex;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus,
+  input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  div#id01 {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Set a style for all buttons */
+  button {
+    background-color: #059c65;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #c20000c0;
+    /*#f44336*/
+  }
+
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+
+  .clearfix {
+    display: flex;
+    width: 100%;
+  }
+
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    /* background-color: #474e5d; */
+    background-color: transparent;
+    padding-top: 50px;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%;
+    /* height: 140vh; */
+    /* Could be more or less, depending on screen size */
+  }
+
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+
+  textarea {
+    vertical-align: top;
+    width: 200px;
+    ;
+    /* padding: 15px; */
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+
+  }
+
+  /* form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px; 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px; 
+  } */
+
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    /* display: table; */
+  }
+
+  /*scroll bar styling*/
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+  }
+
+  .icoo i {
+    margin-right: 900px;
+  }
+
+  .ico i {
+    height: 50px;
+    width: 50px;
+    margin-top: 25px;
+  }
+
+  .area i {
+    margin-right: 600px;
+    margin-top: 20px;
+  }
+
+  .gender i {
+    margin-right: 670px;
+  }
+
+  .date i {
+    margin-right: 780px;
+  }
+
+  .add i {
+    margin-right: 740px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
+
+<body>
+
+  <div class="contain" style="position: relative;bottom:50px; ">
+    <div class="card outer" style="border-radius: 25px;">
+      <div class="row">
+        <div class="card inner">
+          <div class="card form" style="box-shadow: 3px 3px 10px black;">
+            <form id="login" action="homepage.html">
+              <h2 style="text-align:center;">Sign in</h2>
+              <img src="Resources/user.png" height="100px" style="position: relative;left:50px;"><br /><br />
+              <span style="position: relative;left:20px">
+                <input type="text" name="username" id="inp" class="inp" placeholder="Username" required style="width:250px;">
+                <i class="fas fa-exclamation-circle failure-icon1"></i>
+                <i class="far fa-check-circle success-icon1"></i>
+                <div class="error1"></div>
+                <input type="password" name="password" class="inpp" id="inp" required placeholder="Password" style="width:250px;">
+                <i class="fas fa-exclamation-circle failure-icon1"></i>
+                <i class="far fa-check-circle success-icon1"></i>
+                <div class="error1"></div>
+              </span><br>
+              <input type="submit" value="Login"  style="width:320px;"><br>
+              <a id="Forgot_password" href="forgot_password.html">Forgot password?</a>
+              <br /><br />
+              <p align="center">Not registered yet? <a href="#" style="color:#c40052"
+                  onclick="document.getElementById('id01').style.display='block'"> Sign up</a></p><br>
+            </form>
+          </div>
+        </div>
+        <a href="homepage.html"><img src="Resources/login_side_pic.jpg"
+            style="height: 550px; width: 550px; position: absolute;top:70px;right:40px;" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+      title="Close Modal">&times;</span>
+    <form class="modal-content" id="signup" onsubmit="check()" oninput="range.value=parseInt(a.value)">
+      <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill this form to create an account.</p>
+        <hr>
+        <div class="ico">
+          <label><b>Email</b></label><br />
+          <input type="email" placeholder="Enter Email" id="email">
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+
+
+        <div class="ico">
+          <label><b>Password</b></label><br />
+          <input type="password" placeholder="Enter Password" id="psw">
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+
+
+
+        <div class="ico">
+          <label><b>Retype Password</b></label><br />
+          <input type="password" placeholder="Retype Password" id="psw-repeat">
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+
+
+        <div class="icoo">
+          <label>
+            <input type="checkbox" id="remember" style="margin-bottom:15px"> Remember me
+          </label>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+
+
+
+        <div class="area">
+          <label><b>Which area are you interested in:</b></label>
+          <select id="area" name="area">
+            <option value="Select Area">Select Area</option>
+            <option value="North">Peelamedu</option>
+            <option value="South">RS Puram</option>
+            <option value="East">Gandhipuram</option>
+            <option value="West">Town Hall</option>
+            <option value="North">Race Course</option>
+            <option value="South">Singanallur</option>
+            <option value="East">PN Palayam</option>
+            <option value="West">Sai Baba Colony</option>
+          </select>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+
+        <div class="gender">
+          <label for=""><b>Gender :</b></label>
+          <input type="radio" id="gender1" name="gender">Male
+          <input type="radio" id="gender2" name="gender">Female
+          <input type="radio" id="gender3" name="gender">Others
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div> <br>
+        </div>
+
+
+
+        <div class="date">
+          <label for=""><b> Date of Birth:</b> <input type="date" id="age" name="age">
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error"></div><br>
+        </div>
+
+
+
+        <div class="add">
+          <label for=""><b>Address : </b></label>
+          <textarea name="address" id="address" rows="5"></textarea>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+
+
+
+        <div class="form-control ph">
+          <label for=""><b>Phone Number : </b></label>
+          <input type="number" value="Phone Number" name="number" id="ph">
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div><br>
+        </div>
+
+        <!-- <label for=""> <b>Rate our Interface :</b></label>
+        <input type="range" min="1" name="a" id="a" max="10"> = <output for="range" form="signup" id="range" name="range">
+        </output>/10 <br><br>
+        <p>By creating an account you agree to our <a href="terms and conditions.html" style="color:#c40052">Terms &
+            Privacy</a>.</p><br> -->
+
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn">Cancel</button>
+          <button type="submit" id="btn" class="signupbtn" >Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+
+  </script>
+</body>
+
+
+</html>

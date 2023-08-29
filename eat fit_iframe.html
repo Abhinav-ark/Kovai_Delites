@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body{   
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position:left;
+        }
+        .container{
+            /*background-color: black;*/
+            width: fit-content;
+            padding: 20px;
+            border-radius: 25px;
+        }
+        .container-item{
+            display: block;
+            background-color: rgba(0,0,0,0.7);
+            width: 600px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+        }
+        .container-item:hover{
+            transform: scale(1.05);
+            transition: all ease-in 200ms;
+        }
+        .rating{
+            color:white;
+            background-color:green;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;   
+        }
+        img {
+            height: 120px;
+            width: 120px;
+            border-radius: 25px;
+        }
+        td{
+            font-weight: bold;
+            padding: 3%;
+            padding-right: 30px;
+        }
+        .one-line{
+            display: inline-flex;
+        }
+        .border{
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        pre {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        span{
+            color: rgb(114, 113, 113);
+            font-weight: lighter;
+        }
+        /*scroll bar styling*/
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track { 
+        background-color: rgba(0,0,0,1);
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3); 
+        border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255,255,255,0.5); 
+        }
+        *{
+        font-family:'Poppins', sans-serif;
+        color: white;
+        }
+        .submit{
+            position: relative;
+            left: 390px;
+            width: fit-content;
+        }
+        .submit:hover{
+            transform: scale(1.1);
+            background-color: rgba(40, 137, 228, 0.733);
+        }
+        #demo{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo1{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        } 
+        #demo2{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo3{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo4{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .desc{
+            font-size: x-small;
+            color:rgb(114, 113, 113); 
+        }
+        .slidecontainer{
+            position: relative;
+            top:15px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="container-item" class="ffloat">
+                <table>
+                    <td align="center"><img src="Resources/butter chicken aloo gobhi.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        BUTTER CHICKEN ALOO GOBHI   <br>
+                        ₹240<br>
+                        <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                        <p class="desc">Wholesome portion of jeera pulao, generous serving of our succulent and creamy butter chicken and a handsome portion of the humbly heroic aloo gobhi adraki.</p>
+                    </td>
+                    <td>
+                        <form action="" class="ffloat" >
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <br>
+                            
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange">
+                                <p>QUANTITY: <span id="demo"></span></p>
+                            </div>
+
+                        </form>
+                    </td>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/dal makhani kulcha burger.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        DAL MAKHANI KULCHA BURGER <br/>
+                        ₹199<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">    
+                        <p class="desc">Whole wheat kulcha layered with creamy delicious dal makhana and crunchy sauteed veggies. </p>
+                    </td>
+                    <td>
+                        <form action=""  class="ffloat">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange1">
+                                <p>QUANTITY: <span id="demo1"></span></p>
+                            </div>
+
+                            <br>
+                        </form>
+                    </td>  
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/gajar ka halwa.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        GAJAR KA HALWA    <br/> 
+                        ₹159<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                        <p class="desc">Quintessential Indian dessert made with carrots, milk, khoya, khandasari sugar, ghee and cardamom. </p>
+                    </td>
+                    <td>
+                        <form action="" class="ffloat" >
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange2">
+                                <p>QUANTITY: <span id="demo2"></span></p>
+                            </div>
+
+                            <br>
+                        </form>
+                    </td>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/gobhi paratha.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        GOBHI PARATHA <br/>
+                        ₹179<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                        <pre style="background-color: blue;font-size: small;width: 30%;"> MUST TRY </pre>                     
+                        <p class="desc">Cauliflower stuffed paratha </p>
+                    </td>
+                    <td>
+                        <form action="" class="ffloat" >
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange3">
+                                <p>QUANTITY: <span id="demo3"></span></p>
+                            </div>
+
+                            <br>
+                        </form>
+                    </td>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                    <td align="center"><img src="Resources/roohafsa milk.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        ROOHAFSA MILK <br/>
+                        ₹84<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                        <p class="desc">Country’s favourite drink for generations! Enjoy every sip of this friendly punch everyday this Ramzan season.</p>
+                    </td>
+                    <td>
+                        <form action="" class="ffloat" >
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange4">
+                                <p>QUANTITY: <span id="demo4"></span></p>
+                            </div>
+
+                            <br>
+
+                        </form>
+                    </td>
+                </table>
+            </div>
+            <form class="submit" action="thankyou.html" target="_parent" >
+                <a><input type="submit" name="" id="" style="background-color: rgba(0, 0, 0, 0.342); border-radius: 5px;position: absolute; right: 60px;"></a>
+            </form>
+        </div>
+        <script>
+            var slider = document.getElementById("myRange");
+            var slider1 = document.getElementById("myRange1");
+            var slider2 = document.getElementById("myRange2");
+            var slider3 = document.getElementById("myRange3");
+            var slider4 = document.getElementById("myRange4");
+            var output = document.getElementById("demo");
+            var output1 = document.getElementById("demo1");
+            var output2 = document.getElementById("demo2");
+            var output3 = document.getElementById("demo3");
+            var output4 = document.getElementById("demo4");
+            output.innerHTML = slider.value;
+            output1.innerHTML = slider.value;
+            output2.innerHTML = slider.value;
+            output3.innerHTML = slider.value;
+            output4.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+            slider1.oninput = function() {
+                output1.innerHTML = this.value;
+            }
+            slider2.oninput = function() {
+                output2.innerHTML = this.value;
+            }
+            slider3.oninput = function() {
+                output3.innerHTML = this.value;
+            }
+            slider4.oninput = function() {
+                output4.innerHTML = this.value;
+            }
+        </script>
+    </body>
+</html>

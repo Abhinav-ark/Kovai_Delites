@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KOVAI DELITES | ABOUT US </title>
+        <link rel="shortcut icon" href="icon.png">
+    </head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    body{
+        background-image:url("Resources/About_us_bg.jpg") ;
+        background-repeat: no-repeat;
+        background-size: 1920px 1080px;
+        margin: 0;
+    }
+    .header{
+      width: 100%;
+      height: 100px;
+      background-color: #c40052;
+      position:absolute;
+      top:0px;
+      left:0px;
+      /*border-bottom: black 1px solid;*/
+    }
+    .fix_nav_bar{
+        position: fixed;
+        z-index: 5;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    table th {
+      padding: 5px;
+      font-size: 14px;
+    }
+    table a::after{
+      content: '';
+      width: 0px;
+      height: 2px;
+      display: block;
+      background: red;
+      transition: 600ms;
+    }
+    table a:hover::after{
+      width: 65%;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    a::after{
+        text-decoration: none;
+        color: white;  
+    }
+    .search{
+      position: absolute;
+      left: 100px;
+      top:25px;
+    }
+    .search input{
+      width: 500px;
+      padding: 10px 35px 10px 15px;
+      border: none;
+      border-radius: 100px;
+      outline: none;
+      box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    }
+    .search button{
+      background: transparent;
+      border:none;
+      border-radius: 100%;
+      outline: none;
+      margin-left: -33px;
+    }
+    .search form{
+      display: flex;
+      flex-direction: row;
+    }
+    .search button img{
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+    } 
+   
+    .vl {
+    border-left: 2px solid white;
+    height: 500px;
+    margin-left:210px;
+    }
+    /*scroll bar styling*/
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track { 
+    background-color: rgba(0,0,0,1);
+    }
+        
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3); 
+    border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255,255,255,0.5); 
+    }
+    *{
+        font-family:'Poppins', sans-serif;
+        color: white;
+    } 
+    .container{
+      background-color: rgba(0,0,0,0.8);
+      color: white;
+      display:table;
+      position: absolute;
+      width: 95%;
+      top: 160px;
+      height: 460px;
+      margin-left: 2.5%;
+      border-radius: 25px;
+    }
+    .video{
+        position:absolute;
+        top:50px;
+        left:50px;
+    }
+    .text_au{
+        height: fit-content;
+        width:550px;
+        position:absolute;
+        top:70px;
+        left:700px;
+    }
+    .waviy {
+        position: relative;
+        top:5px;
+    }
+    .waviy span {
+        position: relative;
+        display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        animation: flip 2s infinite;
+        animation-delay: calc(.2s * var(--i))
+    }
+    @keyframes flip {
+        0%,80% {
+        transform: rotateY(360deg) 
+        }
+    }
+    </style>
+    <body>
+      <div class="header fix_nav_bar">
+        <a style="position: absolute;top:10px; left:10px;"><img src="Resources/icon.png" alt="logo" height="65px" width="65px"></a>
+        <div class="search">
+            <form action="#">
+            <input type="text" placeholder="Search" name="search">
+            <button type="submit"><a><img src="Resources/search.png" alt="search"></a></button>
+            </form>
+            <a href="login.html" style="font-size: 15px; font-weight:bold; color: white;position: absolute; right:-670px;bottom:-10px;" align="center"><img class="hs" src="Resources/Sign_up.png" alt="Signup" height="45px" width="45px" ><br/>Sign up / in</a>
+            <a href="homepage.html" style="font-size:15px; font-weight:bold; color: white;position: absolute; left:1050px;bottom:-10px;" align="center"><img class="hs" src="Resources/home icon.png" alt="Home" height="45px" width="45px"><br/>Home</a>
+        </div>
+            <table style="background-color:black; position: absolute; top:83px; left:0px;margin-left:auto;margin-right: auto;border-bottom: white 1px solid;" width="100%" height="41px">
+                <thead style="text-align: left;color: white;">
+                    <th style="color:black ;font-size: 1px;">Braches:</th>
+                    <th><a href="homepage.html#restaurants_saibaba_colony_iframe">Sai Baba Colony</a></th>
+                    <th><a href="homepage.html#restaurants_peelamedu_iframe">Peelamedu</a></th>
+                    <th><a href="homepage.html#restaurants_rs_puram_iframe">RS Puram</a></th>
+                    <th><a href="homepage.html#restaurants_gandhipuram_iframe">Gandhipuram</a></th>
+                    <th><a href="homepage.html#restaurants_townhall_iframe">Town Hall</a></th>
+                    <th><a href="homepage.html#restaurants_racecourse_iframe">Race Course</a</th>
+                    <th><a href="homepage.html#restaurants_singanallur_iframe">Singanallur</a></th>
+                    <th><a href="homepage.html#restaurants_pnpalayam_iframe">PN Palayam</a></th>
+                    <th>
+                        <form action="map.html"><button type="submit" style="background-color:white;color:black;font-weight:bold;border: none;height: 25px;width:70px;border-radius:5px;">Map</button></form>
+                    </th>
+                </thead>
+            </table>
+      </div> 
+      <div class="container">
+          <div class="video">
+            <video id="vid" width="600px" height="350px" controls autoplay loop>
+                <source src="Resources/video_about_us.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="text_au">
+            <div class="waviy">
+                <span style="--i:1">A</span>
+                <span style="--i:2">B</span>
+                <span style="--i:3">O</span>
+                <span style="--i:4">U</span>
+                <span style="--i:5">T</span>
+                <span style="--i:6"> </span>
+                <span style="--i:6"> </span>
+                <span style="--i:7">U</span>
+                <span style="--i:8">S</span>
+            </div>
+            <p>We are a food ordering and delivery company based in Coimbatore, operating in 8 major zones. Our platform connects customers, restaurant partners and delivery partners. We serve their multiple needs and satisfy their food cravings. Customers use our platform to discover restaurants and order food. We also provide restaurant partners with industry-specific marketing tools which enable them to engage and acquire customers to grow their business. We offer a reliable and efficient delivery service. We have a user base of about 40 restaurants and 1 Lakh customers.</p>
+          </div>
+      </div> 
+    </body>
+</html>

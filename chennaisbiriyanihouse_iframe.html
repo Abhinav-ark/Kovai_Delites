@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"></head>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body{   
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position:left;
+            background-color: rgba(0,0,0,0 );
+        }
+        .container{
+            /*background-color: black;*/
+            width: fit-content;
+            padding: 20px;
+            border-radius: 25px;
+            position: absolute;
+            top:0px;
+            left:0px;
+        }
+        .container-item{
+            display: block;
+            background-color: rgba(0,0,0,0.7);
+            width: 600px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            height: 200px;
+        }
+        .container-item:hover{
+            transform: scale(1.05);
+            transition: all ease-in 200ms;
+        }
+        .rating{
+            color:white;
+            background-color:green;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;   
+        }
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 25px;
+        }
+        td{
+            font-weight: bold;
+            padding: 3%;
+            padding-right: 30px;
+        }
+        .one-line{
+            display: inline-flex;
+        }
+        .border{
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        pre {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        span{
+            color: green;
+            font-weight: lighter;
+        }
+        /*scroll bar styling*/
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track { 
+        background-color: rgba(0,0,0,1);
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3); 
+        border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255,255,255,0.5); 
+        }
+        *{
+        font-family:'Poppins', sans-serif;
+        color: white;
+        }
+        .submit{
+            position: relative;
+            left: 390px;
+            width: fit-content;
+        }
+        .submit:hover{
+            transform: scale(1.1);
+            background-color: rgba(40, 137, 228, 0.733);
+        }
+        #demo{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .arrange{
+            height: 100%;
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .cart{
+            color: black;
+        }
+        .product-img {
+            max-width: 140px;
+            margin: -15px  auto;
+            justify-content: center;
+            position: relative;
+            top:20px;
+            }
+            .product-name {
+            font-weight: 400;
+            font-size: medium;
+            width: 400px;
+            }
+        .wrapper{
+            height: 80%;
+            width: 80%;
+            display:  flex;
+            justify-content: space-around;
+        }
+        .row1{
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            width: 100px;
+            
+        }
+        .column{
+            display: table-column;
+        }
+        .imgwrap{
+            height:50px;
+            padding-left:10px;
+            padding-top: 40px;
+        }
+        .row{
+            padding-bottom: 10px;
+            display: flex;
+            padding-bottom: 10px;
+        }
+        h6{
+            width: 375px;
+            font-size: 10px;
+            color:rgb(114, 113, 113) ;
+            position: relative;
+            bottom: 50px;
+            
+        }
+        .product-price{
+            position: relative;
+            bottom: 27px;
+        }
+        #ab1,#ab2,#ab3,#ab4,#ab5{
+            position: relative;
+            bottom: 45px;
+        }
+    </style>
+    <body>
+        <div class="arrange">
+            <div class="container">
+                <div class="container-item">
+                    <div class=" wrapper">
+                        <div class="row"><div class="imgwrap"><img class="product-img" src="Resources/chinese chilli chicken.jpg"/></div></div>
+                        <div class=" row1"><div style="visibility:hidden">hello</div><br><h5 class="product-name">Chinese Chilli Chicken</h5><br><p class="product-price">209 Rs.</p><br><h6>Bestseller</h6> 
+                            <form action="">
+                                <button class="btn badge badge-pill badge-secondary mt-2 float-right" id="ab1" type="button" 
+                                    data-action="add-to-cart">Add to cart</button><br><br>
+                                <br>
+                            </form>
+                        </div>
+                        <div class="row" style="position: relative;right: 30px;top: 70px;">
+                            <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                            
+                        </div>
+                        <div class="row"style="padding-top:50px">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="container-item">
+                    <div class=" wrapper">
+                        <div class="row"><div class="imgwrap"><img class="product-img" src="Resources/egg biryani.jpg"/></div></div>
+                        <div class=" row1"><div style="visibility:hidden">hello</div><h5 class="product-name">Donne Egg Biriyani</h5><br><p class="product-price">149 Rs.</p><br><h6>Biriyani house speciality</h6>
+                            <form action="">
+                                <button class="btn badge badge-pill badge-secondary mt-2 float-right" id="ab2" type="button" 
+                                    data-action="add-to-cart">Add to cart</button><br><br>
+                                <br>
+                            </form>
+                        </div>
+                        <div class="row" style="position: relative;right: 30px;top: 50px;">
+                            <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                            
+                        </div>
+                        <div class="row"style="padding-top:50px">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="container-item">
+                    <div class=" wrapper">
+                        <div class="row"><div class="imgwrap"><img class="product-img" src="Resources/chicken fry.jpg"/></div></div>
+                        <div class=" row1"><div style="visibility:hidden">hello</div><h5 class="product-name">Chicken Fry</h5><br><p class="product-price">189 Rs.</p><br><h6>Crispy and juicy</h6>
+                            <form action="">
+                                <button class="btn badge badge-pill badge-secondary mt-2 float-right" id="ab3" type="button" 
+                                    data-action="add-to-cart">Add to cart</button><br><br>
+                                <br>
+                            </form>
+                        </div>
+                        <div class="row" style="position: relative;right: 30px;top: 50px;">
+                            <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                            
+                        </div>
+                        <div class="row"style="padding-top:50px">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-item">
+                    <div class=" wrapper">
+                        <div class="row"><div class="imgwrap"><img class="product-img" src="Resources/chicken biryani.jpg"/></div></div>
+                        <div class=" row1"><div style="visibility:hidden">hello</div><h5 class="product-name">Donne Chicken Biriyani</h5><br><p class="product-price">199 Rs.</p><br><h6>Must try</h6>
+                            <form action="">
+                                <button class="btn badge badge-pill badge-secondary mt-2 float-right" id="ab4" type="button" 
+                                    data-action="add-to-cart">Add to cart</button><br><br>
+                                <br>
+                            </form>
+                        </div>
+                        <div class="row" style="position: relative;right: 30px;top: 50px;">
+                            <img src="./Resources/nonveg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                            
+                        </div>
+                        <div class="row"style="padding-top:50px">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="container-item">
+                    <div class=" wrapper">
+                        <div class="row"><div class="imgwrap"><img class="product-img" src="Resources/baby corn manchurian.jpg"/></div></div>
+                        <div class=" row1"><div style="visibility:hidden">hello</div><h5 class="product-name">Baby Corn Munchurian</h5><br><p class="product-price">179 Rs.</p><br><h6>Bestseller</h6>
+                            <form action="">
+                                <button class="btn badge badge-pill badge-secondary mt-2 float-right" id="ab5" type="button" 
+                                    data-action="add-to-cart">Add to cart</button><br><br>
+                                <br>
+                            </form>
+                        </div>
+                        <div class="row" style="position: relative;right: 30px;top: 50px;">
+                            <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                            
+                        </div>
+                        <div class="row"style="padding-top:50px">
+                            
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div>
+            <div class="cart"></div>
+        </div>
+        </div>
+        <script>
+            let cart = [];
+let cartTotal = 0;
+const cartDom = document.querySelector(".cart");
+const addtocartbtnDom = document.querySelectorAll('[data-action="add-to-cart"]');
+
+addtocartbtnDom.forEach(addtocartbtnDom => {
+  addtocartbtnDom.addEventListener("click", () => {
+    const productDom = addtocartbtnDom.parentNode.parentNode;
+    const product = {
+      name: productDom.querySelector(".product-name").innerText,
+      price: productDom.querySelector(".product-price").innerText,
+      quantity: 1
+   };
+   console.log(productDom.querySelector(".product-name").innerText)
+
+const IsinCart = cart.filter(cartItem => cartItem.name === product.name).length > 0;
+if (IsinCart === false) {
+  cartDom.insertAdjacentHTML("beforeend",`
+  <div class="d-flex flex-row shadow-sm card cart-items mt-2 mb-3 animated flipInX " style="background-color: rgba(0, 0, 0, 0.467);position:relative;top:0px;left:660px;">
+    <div class="p-2 mt-3">
+        <p class=" cart_item_name" style="color:white">${product.name}</p>
+    </div>
+    <div class="p-2 mt-3">
+        <p class=" cart_item_price" style="color:white">${product.price}</p>
+    </div>
+    <div class="p-2 mt-3 ml-auto">
+        <button class="btn badge badge-secondary" style="color:white" type="button" data-action="increase-item">&plus;
+    </div>
+    <div class="p-2 mt-3">
+      <p class="  cart_item_quantity" style="color:white">${product.quantity}</p>
+    </div>
+    <div class="p-2 mt-3">
+      <button class="btn badge badge-info" type="button" data-action="decrease-item">&minus;
+    </div>
+    <div class="p-2 mt-3">
+      <button class="btn badge badge-danger" type="button" data-action="remove-item">&times;
+    </div>
+  </div> 
+  `);
+
+  if(document.querySelector('.cart-footer') === null){
+    cartDom.insertAdjacentHTML("afterend",  `
+      <div class="d-flex flex-row shadow-sm card cart-footer mt-2 mb-3 animated flipInX" style="background-color: rgba(0, 0, 0, 0.467);position:relative;top:0px;left:660px;">
+        <div class="p-2">
+          <button class="btn badge-danger" type="button" data-action="clear-cart">Clear Cart
+        </div>
+        <div style="position:relative;bottom:6px;">
+            <br>
+            Total:  
+            <span class="pay" style="color:white;"></span>
+        </div>
+        <div class="p-2 ml-auto">
+          <button class="btn badge-dark" type="button" data-action="check-out">Proceed to check out 
+            &#10137;
+        </div>
+      </div>`); }
+
+    addtocartbtnDom.innerText = "In cart";
+    addtocartbtnDom.disabled = true;
+    cart.push(product);
+
+    const cartItemsDom = cartDom.querySelectorAll(".cart-items");
+    cartItemsDom.forEach(cartItemDom => {
+
+    if (cartItemDom.querySelector(".cart_item_name").innerText === product.name) {
+
+      cartTotal += parseInt(cartItemDom.querySelector(".cart_item_quantity").innerText) 
+      * parseInt(cartItemDom.querySelector(".cart_item_price").innerText);
+      document.querySelector('.pay').innerText = cartTotal + " Rs.";
+
+      // increase item in cart
+      cartItemDom.querySelector('[data-action="increase-item"]').addEventListener("click", () => {
+        cart.forEach(cartItem => {
+          if (cartItem.name === product.name) {
+            cartItemDom.querySelector(".cart_item_quantity").innerText = ++cartItem.quantity;
+            cartItemDom.querySelector(".cart_item_price").innerText = parseInt(cartItem.quantity) *
+            parseInt(cartItem.price) + " Rs.";
+            cartTotal += parseInt(cartItem.price)
+            document.querySelector('.pay').innerText = cartTotal + " Rs.";
+          }
+        });
+      });
+
+      // decrease item in cart
+      cartItemDom.querySelector('[data-action="decrease-item"]').addEventListener("click", () => {
+        cart.forEach(cartItem => {
+          if (cartItem.name === product.name) {
+            if (cartItem.quantity > 1) {
+              cartItemDom.querySelector(".cart_item_quantity").innerText = --cartItem.quantity;
+              cartItemDom.querySelector(".cart_item_price").innerText = parseInt(cartItem.quantity) *
+              parseInt(cartItem.price) + " Rs.";
+              cartTotal -= parseInt(cartItem.price)
+              document.querySelector('.pay').innerText = cartTotal + " Rs.";
+            }
+          }
+        });
+      });
+
+      //remove item from cart
+      cartItemDom.querySelector('[data-action="remove-item"]').addEventListener("click", () => {
+        cart.forEach(cartItem => {
+          if (cartItem.name === product.name) {
+              cartTotal -= parseInt(cartItemDom.querySelector(".cart_item_price").innerText);
+              document.querySelector('.pay').innerText = cartTotal + " Rs.";
+              cartItemDom.remove();
+              cart = cart.filter(cartItem => cartItem.name !== product.name);
+              addtocartbtnDom.innerText = "Add to cart";
+              addtocartbtnDom.disabled = false;
+          }
+          if(cart.length < 1){
+            document.querySelector('.cart-footer').remove();
+          }
+        });
+      });
+
+      //clear cart
+      document.querySelector('[data-action="clear-cart"]').addEventListener("click" , () => {
+        cartItemDom.remove();
+        cart = [];
+        cartTotal = 0;
+        if(document.querySelector('.cart-footer') !== null){
+          document.querySelector('.cart-footer').remove();
+        }
+        addtocartbtnDom.innerText = "Add to cart";
+        addtocartbtnDom.disabled = false;
+      });
+
+      document.querySelector('[data-action="check-out"]').addEventListener("click" , () => {
+        if(document.getElementById('paypal-form') === null){
+          checkOut();
+        }
+      });
+    }
+  });
+}
+});
+});
+
+function animateImg(img) {
+  img.classList.add("animated","shake");
+}
+
+function normalImg(img) {
+  img.classList.remove("animated","shake");
+}
+
+function checkOut() {
+  let paypalHTMLForm = `
+  <form id="paypal-form" action="thankyou.html" target="_parent" method="post" >`;
+   
+  cart.forEach((cartItem,index) => {
+   ++index;
+   paypalHTMLForm += ` <input type="hidden" name="item_name_${index}" value="${cartItem.name}">
+    <input type="hidden" name="amount_${index}" value="${cartItem.price.replace("Rs.","")}">
+    <input type="hidden" name="quantity_${index}" value="${cartItem.quantity}">`;
+  });
+   
+  paypalHTMLForm += `<input type="hidden" value="" class="paypal">
+  </form>`;
+  document.querySelector('body').insertAdjacentHTML("beforeend", paypalHTMLForm);
+  document.getElementById("paypal-form").submit();
+}
+        </script>
+    </body>
+</html>

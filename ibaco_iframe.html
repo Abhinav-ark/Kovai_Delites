@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body{   
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position:left;
+        }
+        .container{
+            /*background-color: black;*/
+            width: fit-content;
+            padding: 20px;
+            border-radius: 25px;
+        }
+        .container-item{
+            display: block;
+            background-color: rgba(0,0,0,0.7);
+            width: 600px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+        }
+        .container-item:hover{
+            transform: scale(1.05);
+            transition: all ease-in 200ms;
+        }
+        .rating{
+            color:white;
+            background-color:green;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;   
+        }
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 25px;
+        }
+        td{
+            font-weight: bold;
+            padding: 3%;
+            padding-right: 30px;
+        }
+        .one-line{
+            display: inline-flex;
+        }
+        .border{
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        pre {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        span{
+            color: rgb(114, 113, 113);
+            font-weight: lighter;
+        }
+        /*scroll bar styling*/
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track { 
+        background-color: rgba(0,0,0,1);
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3); 
+        border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255,255,255,0.5); 
+        }
+        *{
+        font-family:'Poppins', sans-serif;
+        color: white;
+        }
+        .submit{
+            position: relative;
+            left: 390px;
+            width: fit-content;
+        }
+        .submit:hover{
+            transform: scale(1.1);
+        }
+        #demo{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo1{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        } 
+        #demo2{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo3{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo4{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        #demo5{
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .desc{
+            font-size: x-small;    
+            color:rgb(152, 152, 152);
+        }
+        .slidecontainer{
+            position: relative;
+            top:15px;
+        }
+    </style>
+        <div class="container">
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/sea salt caramel ice cream.jpg"></td>
+                    <td style="padding-right: 30px; width: 250px;">
+                        Sea Salt Caramel Ice Cream<br>
+                        ₹113.05<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                        <p class="desc">Caramel and pecan serve up a treat that is part salty, part nutty.</p>
+                    </td>
+                    <td>
+                        <form action="">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <br>
+                            
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange5">
+                                <p>QUANTITY: <span id="demo5"></span></p>
+                            </div>
+
+                        </form>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/californian pistacio ice cream.jpg"></td>
+                    <td style="padding-right: 30px;width: 250px;">
+                        Californian Pistacio Ice Cream<br/>
+                        ₹113.05<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">    
+                        <p class="desc">Pistachio rich in flavor, and with that unmistakable Californian swagger.</p>
+                    </td>
+                    <td>
+                        <form action="" >
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange4">
+                                <p>QUANTITY: <span id="demo4"></span></p>
+                            </div>
+
+                            <br>
+                        </form>
+                    </td>
+                </tr>  
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/coffee cold brew.jpg"></td>
+                    <td style="padding-right: 30px;width: 250px;">
+                        Coffee Cold Brew<br/> 
+                        ₹188.75<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                        <p class="desc">Coffee and cream ice cream [95 grams], flavored full cream milk, coffee syrup combination.</p>
+                    </td>
+                    <td>
+                        <form action="">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange3">
+                                <p>QUANTITY: <span id="demo3"></span></p>
+                            </div>
+
+                            <br>
+                        </form>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/vanilla choco berry ice cream.jpg"></td>
+                    <td style="padding-right: 30px;width: 250px;">
+                        Vanilla Choco Berry Ice Cream<br/>
+                        ₹113.05<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">                     
+                        <p class="desc">Vanilla, chocolate and berry – sit back and enjoy as 3 classic flavors vie for your attention.</p>
+                    </td>
+                    <td>
+                        <form action="">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange2">
+                                <p>QUANTITY: <span id="demo2"></span></p>
+                            </div>
+                            <br>
+                        </form>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/black currant ice cream cake.jpg" style="height: 120px;width: 120px;"></td>
+                    <td style="padding-right: 30px;width: 250px;">
+                        Black Currant Ice Cream Cake<br/>
+                        ₹1560<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">                     
+                        <p class="desc">Cranberries, dried blackcurrant chunks mingle with electric blackcurrant and blackberry ice cream, with fruit infused cream on the side-the perfect treat.</p>
+                    </td>
+                    <td>
+                        <form action="">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -10px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange1">
+                                <p>QUANTITY: <span id="demo1"></span></p>
+                            </div>
+                            <br>
+                        </form>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="container-item">
+                <table>
+                <tr>
+                    <td align="center"><img src="Resources/caramel walnut ice cream cake.jpg"></td>
+                    <td style="padding-right: 30px;width: 250px;">
+                        Caramel Walnut Ice Cream Cake<br/>
+                        ₹940<br>
+                        <img src="./Resources/veg.png"style="width: 15px;height: 15px;border-radius:0px;">
+                        <p class="desc">Caramel and walnut come together for an exotic celebration of flavours.</p>
+                    </td>
+                    <td>
+                        <form action="">
+                            <input type="checkbox" name="tick" id="" style="width: 15px;height: 15px;float: left;position:relative;top: -5px;">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="5" value="0" class="slider" id="myRange">
+                                <p>QUANTITY: <span id="demo"></span></p>
+                            </div>
+
+                            <br>
+
+                        </form>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <form class="submit" action="thankyou.html" target="_parent" >
+                <a><input type="submit" name="" id="" style="background-color: rgba(0, 0, 0, 0.342); border-radius: 5px; position: absolute; right: 60px;"></a>
+            </form>
+        </div>
+        <script>
+            var slider = document.getElementById("myRange");
+            var slider1 = document.getElementById("myRange1");
+            var slider2 = document.getElementById("myRange2");
+            var slider3 = document.getElementById("myRange3");
+            var slider4 = document.getElementById("myRange4");
+            var slider5 = document.getElementById("myRange5")
+            var output = document.getElementById("demo");
+            var output1 = document.getElementById("demo1");
+            var output2 = document.getElementById("demo2");
+            var output3 = document.getElementById("demo3");
+            var output4 = document.getElementById("demo4");
+            var output5 = document.getElementById("demo5")
+            output.innerHTML = slider.value;
+            output1.innerHTML = slider.value;
+            output2.innerHTML = slider.value;
+            output3.innerHTML = slider.value;
+            output4.innerHTML = slider.value;
+            output5.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+            slider1.oninput = function() {
+                output1.innerHTML = this.value;
+            }
+            slider2.oninput = function() {
+                output2.innerHTML = this.value;
+            }
+            slider3.oninput = function() {
+                output3.innerHTML = this.value;
+            }
+            slider4.oninput = function() {
+                output4.innerHTML = this.value;
+            }
+            slider5.oninput = function() {
+                output5.innerHTML = this.value;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ORDER | NIGHTOUT
+        </title>
+        <link rel="shortcut icon" href="icon.png">
+    </head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    body{
+        background-image:url("Resources/Map_Background.jpg") ;
+        background-repeat: no-repeat;
+        background-size: 1920px 1080px;
+        margin: 0;
+    }
+    .header{
+      width: 100%;
+      height: 100px;
+      background-color: #c40052;
+      position:absolute;
+      top:0px;
+      left:0px;
+      /*border-bottom: black 1px solid;*/
+    }
+    .fix_nav_bar{
+        position: fixed;
+        z-index: 5;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    table th {
+      padding: 5px;
+      font-size: 14px;
+    }
+    table a::after{
+      content: '';
+      width: 0px;
+      height: 2px;
+      display: block;
+      background: red;
+      transition: 600ms;
+    }
+    table a:hover::after{
+      width: 65%;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    a::after{
+        text-decoration: none;
+        color: white;  
+    }
+    .search{
+      position: absolute;
+      left: 100px;
+      top:25px;
+    }
+    .search input{
+      width: 500px;
+      padding: 10px 35px 10px 15px;
+      border: none;
+      border-radius: 100px;
+      outline: none;
+      box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    }
+    .search button{
+      background: transparent;
+      border:none;
+      border-radius: 100%;
+      outline: none;
+      margin-left: -33px;
+    }
+    .search form{
+      display: flex;
+      flex-direction: row;
+    }
+    .search button img{
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+    } 
+   
+    .vl {
+    border-left: 2px solid white;
+    height: 500px;
+    margin-left:210px;
+    }
+    /*scroll bar styling*/
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track { 
+    background-color: rgba(0,0,0,1);
+    }
+        
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3); 
+    border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255,255,255,0.5); 
+    }
+    *{
+        font-family:'Poppins', sans-serif;
+        color: white;
+    } 
+    .container{
+      background-color: black;
+      color: white;
+      display:table;
+      position: absolute;
+      width: 100vw;
+      top: 120px;
+
+    }
+    .res_ima{
+      width: 30%;
+      display:table-cell;
+      padding-top: 70px;
+      padding-left: 50px;
+    }
+    .ima_box{
+      height:165px ;
+      width: 254px;
+    }
+    .res_name{
+      display: table-cell;
+    }
+    .promo{
+      display: table-cell;
+      color: white;
+      width: 298px;
+      padding: 74px 0 48px;
+      height: 100%;
+    }
+    .text_box{
+      display: table-cell;
+    }
+    .res_n_text{
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      width: 450px;
+      height: 170px;
+      justify-content: space-between;
+      position: relative;
+      top: -140px;
+    }
+    .rating{
+      display: flex;
+      flex-direction: row;
+      row-gap: 10px;
+      justify-content: space-evenly;
+      width: 370px;
+    }
+    .vert{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .up{
+      display: flex;
+      justify-content: center;
+    }
+    .promo{
+      display: table-cell;
+    }
+    .p_text{
+      text-transform: uppercase;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: large;
+      font-weight: 800;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgb(0, 0, 0);
+      z-index: 1;
+      position: absolute;
+      top: 90px;
+      padding: 5px;
+      right: 300px;
+
+    }
+    .code{
+      border: 1px solid white ;
+      text-align: center;
+      position: relative;
+      top: -60px;
+      right: 50px;
+      padding: 50px;
+    }
+    
+
+    </style>
+    <body>
+      <div class="header fix_nav_bar">
+        <a style="position: absolute;top:10px; left:10px;"><img src="Resources/icon.png" alt="logo" height="65px" width="65px"></a>
+        <div class="search">
+            <form action="#">
+            <input type="text" placeholder="Search" name="search">
+            <button type="submit"><a><img src="Resources/search.png" alt="search"></a></button>
+            </form>
+            <a href="login.html" style="font-size: 15px; font-weight:bold; color: white;position: absolute; right:-670px;bottom:-10px;" align="center"><img class="hs" src="Resources/Sign_up.png" alt="Signup" height="45px" width="45px" ><br/>Sign up / in</a>
+            <a href="homepage.html" style="font-size:15px; font-weight:bold; color: white;position: absolute; left:1050px;bottom:-10px;" align="center"><img class="hs" src="Resources/home icon.png" alt="Home" height="45px" width="45px"><br/>Home</a>
+        </div>
+            <table style="background-color:black; position: absolute; top:83px; left:0px;margin-left:auto;margin-right: auto;border-bottom: white 1px solid;" width="100%" height="41px">
+                <thead style="text-align: left;color: white;">
+                    <th style="color:black ;font-size: 1px;">Braches:</th>
+                    <th><a href="homepage.html#restaurants_saibaba_colony_iframe">Sai Baba Colony</a></th>
+                    <th><a href="homepage.html#restaurants_peelamedu_iframe">Peelamedu</a></th>
+                    <th><a href="homepage.html#restaurants_rs_puram_iframe">RS Puram</a></th>
+                    <th><a href="homepage.html#restaurants_gandhipuram_iframe">Gandhipuram</a></th>
+                    <th><a href="homepage.html#restaurants_townhall_iframe"><p style="border-bottom: 2px red solid;width:65%;margin: 0px;">Town Hall</p></a></th>
+                    <th><a href="homepage.html#restaurants_racecourse_iframe">Race Course</a</th>
+                    <th><a href="homepage.html#restaurants_singanallur_iframe">Singanallur</a></th>
+                    <th><a href="homepage.html#restaurants_pnpalayam_iframe">PN Palayam</a></th>
+                    <th>
+                        <form action="map.html"><button type="submit" style="background-color:white;color:black;font-weight:bold;border: none;height: 25px;width:70px;border-radius:5px;">Map</button></form>
+                    </th>
+                </thead>
+            </table>
+      </div>
+      <div class="container">
+        <div class="res_ima">
+            <img class="ima_box" src="Resources/Nightout.jpg" alt="">
+        </div>
+        <div class="res_name">
+          <div class="text_box">
+            <div class="res_n_text">
+              <span style="font-size: x-large;font-weight:700;">NIGHTOUT</span>
+              <span style="color: grey;">Chinese, South Indian, North Indian</span>
+              <div class="rating">
+                <div class="vert">
+                  <div class="up">
+                    <span style="color: grey;">★ 3.4 </span>
+                  </div>
+                  <span style="color: grey;">150+ ratings</span>
+                </div>
+                <hr style="height:50px;width: 0px; position:relative; left: -10px;">
+                <div class="vert">
+                  <div class="up">
+                    <span style="color: grey;">34 min </span>
+                  </div>
+                  <span style="color: grey;">delivery time</span>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="promo">
+          <div class="p_text">
+            <span>PROMO</span>
+          </div>
+          <div class="code">
+            <div class="c_text">
+                TRYNEW<br>
+             WELCOME50
+            </div>
+          </div>
+
+        </div> 
+      </div>
+      <iframe src="nightout_iframe.html" style="border:none; width: 100%;height: 528px; position:absolute;top:529px;left:400px;" id="restaurants_peelamedu_iframe" scrolling="yes"></iframe>
+    </body>
+</html>

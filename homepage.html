@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>KOVAI DELITES | HOME</title>
+  <link rel="shortcut icon" href="Resources/icon.png">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+  .scroller {
+    height: 50px;
+    line-height: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 25 0px;
+  }
+
+  .scroller span {
+    position: absolute;
+    top: 0;
+    animation: slide 5s ease-in-out infinite;
+    font-weight: 500;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  }
+
+  .scrolltop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    background-color: #c40052;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-radius: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+  }
+
+  .animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 50px;
+  }
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      top: 0;
+    }
+
+    25% {
+      top: -70px;
+    }
+
+    50% {
+      top: -130px;
+    }
+
+    75% {
+      top: -200px;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 0px;
+    width: 100%;
+    position: absolute;
+    padding: 5px;
+
+  }
+
+  .container1 {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 0px;
+    width: 100%;
+    position: absolute;
+    padding: 5px;
+
+  }
+
+  .ttext {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+    top: 8px;
+
+  }
+
+  .ttext1 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+    top: 8px;
+    left: 800px;
+  }
+
+  .slideshow-container {
+    position: absolute;
+    left: 300px;
+    top: 30px;
+  }
+
+  .mySlides {
+    display: none;
+    height: 230px;
+    border: solid 1px black;
+
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #222428;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0
+  }
+
+  .next {
+    right: -50px;
+    border-radius: 3px 3px 3px 3px
+  }
+
+  .prev {
+    left: -50px;
+    border-radius: 3px 3px 3px 3px
+  }
+
+  .prev:hover,
+  .next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.8)
+  }
+
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #00000000
+  }
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0
+  }
+
+  img {
+    border-radius: 15px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  a img {
+    transition: all 200ms ease-in;
+  }
+
+  a img:hover {
+    transform: scale(1.1);
+    transition: all ease-in 200ms;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 5px;
+    width: 5px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+  }
+
+  .active,
+  .dot:hover {
+    background-color: #717171
+  }
+
+  .header {
+    width: 100%;
+    height: 100px;
+    background-color: #c40052;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .footer {
+    width: 100%;
+    height: 64vh;
+    border: none;
+  }
+
+  .fix_nav_bar {
+    position: fixed;
+    z-index: 1;
+  }
+
+  table a::after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: red;
+    transition: 600ms;
+  }
+
+  table a:hover::after {
+    width: 65%;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  table th {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  table {
+    border-bottom: white solid 1px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .search {
+    position: absolute;
+    left: 100px;
+    top: 25px;
+  }
+
+  .search input {
+    width: 550px;
+    padding: 10px 35px 10px 15px;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .search button {
+    background: transparent;
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    margin-left: -33px;
+  }
+
+  .search form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .search button img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+
+  /*scroll bar styling*/
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 7.5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all ease 3s;
+  }
+
+  .reveal.active1 {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .title {
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma;
+  }
+
+  .content {
+    color: white;
+    font-size: large;
+
+  }
+
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 5px;
+    padding-bottom: 15px;
+
+  }
+
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
+<script>
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active1");
+      } else {
+        reveals[i].classList.remove("active1");
+      }
+    }
+  }
+  window.addEventListener("scroll", reveal);
+  var slideIndex = 1;
+
+  var myTimer;
+
+  var slideshowContainer;
+
+  window.addEventListener("load", function () {
+    showSlides(slideIndex);
+    myTimer = setInterval(function () { plusSlides(1) }, 4000);
+
+    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+
+    slideshowContainer.addEventListener('mouseenter', pause)
+    slideshowContainer.addEventListener('mouseleave', resume)
+  })
+
+  // NEXT AND PREVIOUS CONTROL
+  function plusSlides(n) {
+    clearInterval(myTimer);
+    if (n < 0) {
+      showSlides(slideIndex -= 1);
+    } else {
+      showSlides(slideIndex += 1);
+    }
+
+    //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+
+    if (n === -1) {
+      myTimer = setInterval(function () { plusSlides(n + 2) }, 4000);
+    } else {
+      myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+    }
+  }
+
+  //Controls the current slide and resets interval if needed
+  function currentSlide(n) {
+    clearInterval(myTimer);
+    myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+
+  pause = () => {
+    clearInterval(myTimer);
+  }
+
+  resume = () => {
+    clearInterval(myTimer);
+    myTimer = setInterval(function () { plusSlides(slideIndex) }, 4000);
+  }
+</script>
+
+<body>
+  <div class="header fix_nav_bar">
+    <img src="Resources/icon.png" alt="logo" height="65px" width="65px"
+      style="border-radius: 0px; position: absolute; left: 10px; top: 10px;">
+    <div class="search">
+      <form action="#">
+        <input type="text" placeholder="Search" name="search">
+        <button type="submit"><a><img src="Resources/search.png" alt="search"></a></button>
+      </form>
+      <a href="login.html"
+        style="font-size: 15px; font-weight:bold; color: white;position: absolute; right:-670px;bottom:-10px;"
+        align="center"><img src="Resources/Sign_up.png" alt="Signup" height="45px" width="45px"><br />Sign up / in</a>
+      <a href="homepage.html"
+        style="font-size:15px; font-weight:bold; color: white;position: absolute; left:1050px;bottom:-10px;"
+        align="center"><img src="Resources/home icon.png" alt="Home" height="45px" width="45px"><br />Home</a>
+    </div>
+    <table style="background-color:black; position: absolute; top:83px; left:0px;margin-left:auto;margin-right: auto;"
+      width="100%" height="41px">
+      <thead style="text-align: left;color: white;">
+        <th style="color:black ;font-size: 1px;">Braches:</th>
+        <th><a href="#restaurants_saibaba_colony_iframe">Sai Baba Colony</a></th>
+        <th><a href="#restaurants_peelamedu_iframe">Peelamedu</a></th>
+        <th><a href="#restaurants_rs_puram_iframe">RS Puram</a></th>
+        <th><a href="#restaurants_gandhipuram_iframe">Gandhipuram</a></th>
+        <th><a href="#restaurants_townhall_iframe">Town Hall</a></th>
+        <th><a href="#restaurants_racecourse_iframe">Race Course</a< /th>
+        <th><a href="#restaurants_singanallur_iframe">Singanallur</a></th>
+        <th><a href="#restaurants_pnpalayam_iframe">PN Palayam</a></th>
+        <th>
+          <form action="map.html"><button type="submit"
+              style="background-color:white;color:black;font-weight:bold;border: none;height: 25px;width:70px;border-radius:5px;">Map</button>
+          </form>
+        </th>
+      </thead>
+    </table>
+  </div>
+  <iframe src="Carousel_iframes/carousel.html"
+    style=" border:none; width: 100%;height: 350px; position:absolute;top:124px;left:0px;" scrolling="no"></iframe>
+  <iframe src="restaurants_saibaba_colony_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 455px;left:0px;"
+    id="restaurants_saibaba_colony_iframe" scrolling="yes"></iframe>
+  <div class="container" style="top:983px;left: 0px;">
+    <div class="ttext reveal">
+      <div class="scroller">
+        <span>
+          <br>
+          CUISINES<br /><br><br>
+          FOOD<br /><br><br>
+          DRINKS<br /><br><br>
+          MUNCHIES
+        </span>
+      </div>
+      <span> AVAILABLE AT SAI BABA COLONY</span>
+      <span>Explore the food diversity of Sai Baba Colony by indulging in a variety of Desserts and Savories. Try new
+        barbeque dishes and quench your thirst with specialities like masala buttermilk. </span>
+    </div>
+  </div>
+  <iframe src="restaurants_peelamedu_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 1280px;left:0px;"
+    id="restaurants_peelamedu_iframe" scrolling="yes"></iframe>
+  <div class="container1" style="top:1808px;left: 0px;">
+    <div class="ttext1 reveal">
+      <div class="animate">
+        <span class="animate-charcter"> CUISINES</span>
+      </div>
+      <span> AVAILABLE AT PEELAMEDU</span>
+      <span>Come and explore Peelamedu's multitude of dishes from, Lasagna to idiyappam. Our restaurants never fail to
+        satisfy you with their lipsmacking snacks.</span>
+    </div>
+  </div>
+
+  <iframe src="Carousel_iframes/food_saibaba_colony_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 983px;left:0px;" scrolling="yes"
+    allowtransparency="true"></iframe>
+  <iframe src="Carousel_iframes/food_peelamedu_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 1808px;left:-700px;" scrolling="yes"
+    allowtransparency="true"></iframe>
+  <iframe src="restaurants_rs_puram_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 2108px;left:0px;"
+    id="restaurants_rs_puram_iframe" scrolling="yes"></iframe>
+  <div class="container" style="top:2636px;left: 0px;">
+    <div class="ttext reveal">
+      <div class="scroller">
+        <span>
+          <br>
+          CUISINES<br /><br><br>
+          FOOD<br /><br><br>
+          DRINKS<br /><br><br>
+          MUNCHIES
+        </span>
+      </div>
+      <span> AVAILABLE AT RS PURAM</span>
+      <span>What's better than the classic Ghee Roast and a strong cup of Filter Coffee? Order from the popular
+        restaurants of RS Puram, to feed the South Indian in you. To finish off treat yourself with a Kesar Badam
+        Kulfi.</span>
+    </div>
+  </div>
+  <iframe src="Carousel_iframes/food_RS_Puram_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 2636px;left:0px;" scrolling="yes"
+    allowtransparency="true"></iframe>
+  <iframe src="restaurants_gandhipuram_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 2936px;left:0px;"
+    id="restaurants_gandhipuram_iframe" scrolling="yes"></iframe>
+  <div class="container1" style="top:3464px;left: 0px;">
+    <div class="ttext1 reveal">
+      <div class="animate">
+        <span class="animate-charcter"> CUISINES</span>
+      </div>
+      <span> AVAILABLE AT GANDHIPURAM</span>
+      <span>For you health freaks out there, Gandhipuram proudly offers a range of herbal teas. It also offers all time
+        favorites like the rasgulla, for you sweet tooths. What are you waiting for? Order Now!</span>
+    </div>
+  </div>
+  <iframe src="Carousel_iframes/food_gandhipuram_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 3464px;left:-700px;" scrolling="yes"
+    allowtransparency="true"></iframe>
+  <iframe src="restaurants_townhall_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 3764px;left:0px;"
+    id="restaurants_townhall_iframe" scrolling="yes"></iframe>
+  <div class="container" style="top:4292px;left: 0px;">
+    <div class="ttext reveal">
+      <div class="scroller">
+        <span>
+          <br>
+          CUISINES<br /><br><br>
+          FOOD<br /><br><br>
+          DRINKS<br /><br><br>
+          MUNCHIES
+        </span>
+      </div>
+      <span> AVAILABLE AT TOWN HALL</span>
+      <span>Dont worry chicken lovers, we've got you covered! Try out delicious chicken dishes in Chennai's Biryani
+        House. Also delve into the world of cakes by ordering incredible pasteries from True Cakes.</span>
+    </div>
+  </div>
+  <iframe src="Carousel_iframes/food_townhall_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 4292px;left:0px;" scrolling="yes"
+    allowtransparency="true"></iframe>
+  <iframe src="restaurants_racecourse_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 4592px;left:0px;"
+    id="restaurants_racecourse_iframe" scrolling="yes"></iframe>
+  <div class="container1" style="top:5120px;left: 0px;">
+    <div class="ttext1 reveal">
+      <div class="animate">
+        <span class="animate-charcter"> CUISINES</span>
+      </div>
+      <span> AVAILABLE AT RACE COURSE</span>
+      <span>Try Kerala's exclusive delicacies like Ayila Fish Fry and Fish Curry at the finest restaurants of Race
+        Course. Also try refreshing summer drinks like Roohafza to soothe your body and mind.</span>
+    </div>
+  </div>
+  <iframe src="Carousel_iframes/food_racecourse_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 5120px;left:-700px;" scrolling="yes"
+    allowtransparency="true"></iframe>
+  <iframe src="restaurants_singanallur_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 5420px;left:0px;"
+    id="restaurants_singanallur_iframe" scrolling="yes"></iframe>
+  <div class="container" style="top:5948px;left: 0px;">
+    <div class="ttext reveal">
+      <div class="scroller">
+        <span>
+          <br>
+          CUISINES<br /><br><br>
+          FOOD<br /><br><br>
+          DRINKS<br /><br><br>
+          MUNCHIES
+        </span>
+      </div>
+      <span> AVAILABLE AT SINGANALLUR</span>
+      <span>Tired of those unpleasant Keto diets? Indulge in our range of guilt free Keto ice creams and satisfy those
+        midnight cravings. Also experience the diversity of our Indian cuisine. Try Singanallur's finger-licking momos
+        today! </span>
+    </div>
+  </div>
+  <iframe src="Carousel_iframes/food_singanallur_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 5948px;left:0px;" scrolling="yes"
+    allowtransparency="true"></iframe>
+  <iframe src="restaurants_pnpalayam_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 6248px;left:0px;"
+    id="restaurants_pnpalayam_iframe" scrolling="yes"></iframe>
+  <div class="container1" style="top:6776px;left: 0px;">
+    <div class="ttext1 reveal">
+      <div class="animate">
+        <span class="animate-charcter"> CUISINES</span>
+      </div>
+      <span> AVAILABLE AT PN PALAYAM</span>
+      <span>Life is all about little pleasures and a pizza is definitely one of them. Order cheesy pizzas from PN
+        Palayam's Dominos. Also reward yourself with a delightful milkshake from Keventers at the end of a tiring
+        day.</span>
+    </div>
+  </div>
+  <iframe src="Carousel_iframes/food_pn_palayam_iframe.html"
+    style="border:none; width: 100%;height: 528px; position:absolute;top: 6776px;left:-700px;" scrolling="yes"
+    allowtransparency="true"></iframe>
+  <iframe src="footer.html" class="footer" style="height: 528px; position:absolute;top: 7076px;"
+    scrolling="no"></iframe>
+  <div class="scrolltop" id="myBtn" onclick="scrolltop()">Top</div>
+</body>
+<script>
+  mybutton = document.getElementById("myBtn");
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+  function scrolltop() {
+      window.scrollTo(0, 0);    
+  }
+</script>
+
+</html>
