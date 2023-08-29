@@ -1,0 +1,250 @@
+<html>
+    <head>   
+    </head>
+    <style>
+        @keyframes slide {
+            0% {
+            top: 0;
+            }
+            25% {
+            top: -70px;
+            }
+            50% {
+            top: -130px;
+            }
+            75% {
+            top: -200px;
+            }
+        }
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin:0;
+        }
+        .container{
+            width: 100%;
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0);
+            display: flex;
+            flex-direction: row;
+            color: aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        .slideshow-container {
+            position: absolute;
+            left: 800px;
+            top:30px ;
+        }
+
+        .mySlides {
+            display: none;
+            height: 230px;
+            border: solid 1px black;
+            
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 35%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: #222428;
+            font-weight: bold;
+            font-size: 30px;
+            transition: .6s ease;
+            border-radius: 0 3px 3px 0
+        }
+
+        .next {
+            right: -50px;
+            border-radius: 3px 3px 3px 3px
+        }
+
+        .prev {
+            left: -50px;
+            border-radius: 3px 3px 3px 3px
+        }
+
+        .prev:hover,
+        .next:hover {
+            color: #f2f2f2;
+            background-color: rgba(0, 0, 0, 0.8)
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0)
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0
+        }
+        img {
+            border-radius: 15px;
+        }
+        a img{
+            transition: all 200ms ease-in;
+        }
+        
+        a img:hover{
+            transform: scale(1.1);
+            transition: all ease-in 200ms;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 5px;
+            width: 5px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color .6s ease
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171
+        }
+
+    </style>
+    <body>
+        <div class="container">
+            <div class="carousal">
+                <div class="slideshow-container">
+                <div class="slideshow-inner">
+                  <div class="mySlides fade">
+                
+                    <a href="../orderpage_polarbear.html" target="_parent"><img  src='../Resources/hot_chocolate_fudge.jpg' style='height: 200px; width: 400px;' alt="sally lightfoot crab"/></a>
+                    <div class="text">Hot Chocolate Fudge</div>
+                  </div>
+                
+                  <div class="mySlides fade">
+                
+                    <a href="../orderpage_thebelgianwaffleco.html" target="_parent"><img  src='../Resources/waffle.jpg' style='height: 200px; width: 400px;' alt="fighting nazca boobies"/></a>
+                    <div class="text">Waffles</div>
+                  </div>
+                
+                  <div class="mySlides fade">
+                
+                    <a href="../orderpage_rollingdoughcafe.html" target="_parent"><img  src='../Resources/lasagna.jpg' style='height: 200px; width: 400px;' alt="otovalo waterfall"/></a>
+                    <div class="text">Lasagna</div>
+                  </div>
+                
+                  <div class="mySlides fade">
+                
+                    <a href="../orderpage_shreeanandhas.html" target="_parent"><img  src='../Resources/idiyappam-coconut-milk.jpg' style='height: 200px; width: 400px;' alt="pelican"/></a>
+                    <div class="text">Idiyappam</div>
+                  </div>
+                  
+                  </div>
+                
+                
+                  <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+                  <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+                  <div style='text-align: center;position: relative;left: 0px;top: 0px;'>
+                    <span class="dot" onclick='currentSlide(1)'></span>
+                    <span class="dot" onclick='currentSlide(2)'></span>
+                    <span class="dot" onclick='currentSlide(3)'></span>
+                    <span class="dot" onclick='currentSlide(4)'></span>
+                  </div>
+                </div>
+                <br/>
+                
+                
+               
+                
+                </div>
+                
+            </div>
+        </div>
+    </body>
+    <script>
+    var slideIndex = 1;
+
+        var myTimer;
+        
+        var slideshowContainer;
+        
+        window.addEventListener("load",function() {
+            showSlides(slideIndex);
+            myTimer = setInterval(function(){plusSlides(1)}, 4000);
+          
+            //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+            slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+          
+            //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+            // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+          
+            slideshowContainer.addEventListener('mouseenter', pause)
+            slideshowContainer.addEventListener('mouseleave', resume)
+        })
+        
+        // NEXT AND PREVIOUS CONTROL
+        function plusSlides(n){
+          clearInterval(myTimer);
+          if (n < 0){
+            showSlides(slideIndex -= 1);
+          } else {
+           showSlides(slideIndex += 1); 
+          }
+          
+          //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+          
+          if (n === -1){
+            myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+          } else {
+            myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+          }
+        }
+        
+        //Controls the current slide and resets interval if needed
+        function currentSlide(n){
+          clearInterval(myTimer);
+          myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n){
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+        
+        pause = () => {
+          clearInterval(myTimer);
+        }
+        
+        resume = () =>{
+          clearInterval(myTimer);
+          myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
+        }
+    </script>
+</html>
