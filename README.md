@@ -1,5 +1,5 @@
 <h1 align="center">Kovai delites</h1>
-<p align="center">Kovai Delites is a Concept Food Ordering Website designed for 40 restaurants spanning over 8 areas in Coimbatore. Done as a part of UI Design Course, Computer Science Engineering, Amrita Vishwa Vidyapeetham.</p>
+<p align="center">Kovai Delites is a Concept Food Ordering Website designed for 40 restaurants spanning over 8 areas in Coimbatore. Done as a part of UI Design Course, Computer Science Engineering, Amrita Vishwa Vidyapeetham, During my First Year B.tech in 2021.</p>
 
 <h1 align="center">UI Screens</h1>
 <p align="center">Screenshots of UI of the Website</p>
