@@ -10,11 +10,8 @@
 <img align="center" src="./Resources/hero_ss.png"/>
 
 <br>
-<h2 align="center">Area type 1</h2>
+<h2 align="center">Areas</h2>
 <img align="center" src="./Resources/section_1_ss.png"/>
-
-<br>
-<h2 align="center">Area type 2</h2>
 <img align="center" src="./Resources/section_2_ss.png"/>
 
 <br>
